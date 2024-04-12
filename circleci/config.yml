@@ -17,13 +17,13 @@ jobs:
       - run:
           name: Build and tag Docker image
           command: |
-            docker build -t $DOCKER_USERNAME/your-image-name .
-            docker tag $DOCKER_USERNAME/your-image-name $DOCKER_USERNAME/your-image-name:latest
+            docker build -t $DOCKER_USERNAME/circle .
+            docker tag $DOCKER_USERNAME/circle $DOCKER_USERNAME/circle:latest
 
       # Push Docker image to Docker Hub
       - run:
           name: Push Docker image to Docker Hub
-          command: docker push $DOCKER_USERNAME/your-image-name
+          command: docker push $DOCKER_USERNAME/circle
 
 workflows:
   version: 2
